@@ -6,7 +6,7 @@
     <title>GeoAnomalies'26 @ ACM SIGSPATIAL</title>
     <link rel="icon" type="image/x-icon" href="./assets/img/favicon.ico">
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
-    <link href="./assets/css/output.css" rel="stylesheet">
+    <link href="./assets/css/output2.css" rel="stylesheet">
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
@@ -14,7 +14,7 @@
     <style>
         :root {
             --apple-bg: #fbfbfd;
-            --apple-text: #1d1d1f;
+            --apple-text: #b0b0c2;
             --apple-gray: #86868b;
             --apple-border: rgba(0, 0, 0, 0.06);
         }
@@ -150,7 +150,101 @@
 
         </div>
     </section>
+<section id="schedule" class="py-20 px-6 bg-white border-y border-gray-200/60">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="text-3xl font-bold mb-4 tracking-tight text-center text-gray-900 gsap-reveal">Conference Program</h2>
+            <p class="text-sm text-gray-500 text-center mb-12 gsap-reveal">November 3rd, 2026 • Convention Center, Riverside, CA, USA</p>
+            
+            <div class="bento-card p-2 gsap-reveal" id="schedule-container">
+                <div class="flex flex-col md:flex-row p-5 schedule-row" data-start="15:30" data-end="15:35">
+                    <div class="md:w-48 flex-shrink-0 mb-1 md:mb-0">
+                        <span class="text-sm font-mono text-gray-500 font-semibold time-label">15:30 - 15:35</span>
+                    </div>
+                    <div class="flex-grow">
+                        <h3 class="text-base font-semibold text-gray-900">🎉 Opening Remarks</h3>
+                    </div>
+                </div>
 
+                <div class="flex flex-col md:flex-row p-5 schedule-row bg-gray-50/50" data-start="15:35" data-end="16:45">
+                    <div class="md:w-48 flex-shrink-0 mb-1 md:mb-0">
+                        <span class="text-sm font-mono text-gray-500 font-semibold time-label">15:35 - 16:45</span>
+                    </div>
+                    <div class="flex-grow">
+                        <span class="inline-block px-2 py-0.5 bg-blue-100 text-blue-700 text-[10px] font-bold uppercase tracking-wider rounded mb-2">Keynote</span>
+                        <h3 class="text-lg font-bold text-gray-900 mb-1">Topic TBD</h3>
+                        <p class="text-sm font-medium text-gray-700 mb-2">Yao-Yi Chiang</p>
+                    </div>
+                </div>
+                <div class="flex flex-col md:flex-row p-5 schedule-row bg-gray-100/50" data-start="16:25" data-end="16:45">
+                    <div class="md:w-48 flex-shrink-0 mb-1 md:mb-0">
+                        <span class="text-sm font-mono text-gray-400 font-semibold time-label">16:25 - 16:45</span>
+                    </div>
+                    <div class="flex-grow flex items-center">
+                        <h3 class="text-sm font-semibold text-gray-500 uppercase tracking-widest">☕️ Coffee Break</h3>
+                    </div>
+                </div>
+
+                <div class="flex flex-col md:flex-row p-5 schedule-row" data-start="16:45" data-end="17:03">
+                    <div class="md:w-48 flex-shrink-0 mb-1 md:mb-0">
+                        <span class="text-sm font-mono text-gray-500 font-semibold time-label">16:45 - 17:03</span>
+                    </div>
+                    <div class="flex-grow">
+                        <h3 class="text-base font-semibold text-gray-900 mb-1">📄 SF-ANOMALIES: A Mobility Dataset for Behavioral and Contextual Anomaly Detection</h3>
+                        <p class="text-xs text-gray-500">Mauryan Uppalapati, Carola Wenk</p>
+                    </div>
+                </div>
+
+                <div class="flex flex-col md:flex-row p-5 schedule-row" data-start="17:03" data-end="17:21">
+                    <div class="md:w-48 flex-shrink-0 mb-1 md:mb-0">
+                        <span class="text-sm font-mono text-gray-500 font-semibold time-label">17:03 - 17:21</span>
+                    </div>
+                    <div class="flex-grow">
+                        <h3 class="text-base font-semibold text-gray-900 mb-1">📄 DeTraj: A Trajectory Degradation Module for Robust Geospatial Anomaly Detection</h3>
+                        <p class="text-xs text-gray-500">Shuai An, Chris Stanford, Shashi Shekhar</p>
+                    </div>
+                </div>
+
+                <div class="flex flex-col md:flex-row p-5 schedule-row" data-start="17:21" data-end="17:39">
+                    <div class="md:w-48 flex-shrink-0 mb-1 md:mb-0">
+                        <span class="text-sm font-mono text-gray-500 font-semibold time-label">17:21 - 17:39</span>
+                    </div>
+                    <div class="flex-grow">
+                        <h3 class="text-base font-semibold text-gray-900 mb-1">📄 LIAD: Lightweight Interpretable Mobility Anomaly Detection via Agent-Adaptive Behavioral Deviations</h3>
+                        <p class="text-xs text-gray-500">Chanuka Ravishan Algama, Erfan Hosseini Sereshgi, Carola Wenk</p>
+                    </div>
+                </div>
+
+                <div class="flex flex-col md:flex-row p-5 schedule-row" data-start="17:39" data-end="17:51">
+                    <div class="md:w-48 flex-shrink-0 mb-1 md:mb-0">
+                        <span class="text-sm font-mono text-gray-500 font-semibold time-label">17:39 - 17:51</span>
+                    </div>
+                    <div class="flex-grow">
+                        <h3 class="text-base font-semibold text-gray-900 mb-1">📄 Agentic-LIAD: Multi-Agent Reasoning over Behavioral Evidence for Mobility Anomaly Detection</h3>
+                        <p class="text-xs text-gray-500">Chanuka Ravishan Algama, Sachith Gunasekara, Carola Wenk</p>
+                    </div>
+                </div>
+
+                <div class="flex flex-col md:flex-row p-5 schedule-row" data-start="17:51" data-end="18:09">
+                    <div class="md:w-48 flex-shrink-0 mb-1 md:mb-0">
+                        <span class="text-sm font-mono text-gray-500 font-semibold time-label">17:51 - 18:09</span>
+                    </div>
+                    <div class="flex-grow">
+                        <h3 class="text-base font-semibold text-gray-900 mb-1">📄 Compactness-Based Shape Profiles for Anomaly Detection in Spatial Features</h3>
+                        <p class="text-xs text-gray-500">Majid Mirzanezhad, Batuhan Tanrikulu</p>
+                    </div>
+                </div>
+
+                <div class="flex flex-col md:flex-row p-5 schedule-row" data-start="18:09" data-end="18:15">
+                    <div class="md:w-48 flex-shrink-0 mb-1 md:mb-0">
+                        <span class="text-sm font-mono text-gray-500 font-semibold time-label">18:09 - 18:15</span>
+                    </div>
+                    <div class="flex-grow">
+                        <h3 class="text-base font-semibold text-gray-900">🎆 Closing Remarks</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <section id="cfp" class="py-20 px-6 max-w-7xl mx-auto border-t border-gray-200/60 mt-8">
         <h2 class="text-3xl font-bold mb-10 tracking-tight text-center text-gray-900 gsap-reveal">Call for Papers</h2>
         
@@ -158,7 +252,9 @@
             <div class="lg:col-span-2 bento-card bg-white p-8 gsap-reveal">
                 <h3 class="text-lg font-semibold border-b border-gray-100 pb-4 mb-6 text-gray-900">Scope & Research Topics</h3>
                 <p class="text-sm text-gray-600 mb-8 leading-relaxed">
-                    The 3rd ACM SIGSPATIAL International Workshop on Geospatial Anomaly Detection (GeoAnomalies’26) is dedicated to assembling leading researchers and esteemed industry experts to examine the latest advancements, formidable challenges, and compelling applications within the crucial domain of anomaly detection for spatial, geospatial, and spatiotemporal data. This workshop is passionately designed to cultivate profound collaboration and extensive knowledge sharing among participants from a comprehensive array of research fields—including machine learning, time series analysis, statistics, remote sensing, geospatial analysis, and trajectory analysis.                    <br>
+                    The 3rd ACM SIGSPATIAL International Workshop on Geospatial Anomaly Detection (GeoAnomalies’26) is dedicated to assembling leading researchers and esteemed industry experts to examine the latest advancements, formidable challenges, and compelling applications within the crucial domain of anomaly detection for spatial, geospatial, and spatiotemporal data. This workshop is passionately designed to cultivate profound collaboration and extensive knowledge sharing among participants from a comprehensive array of research fields—including machine learning, time series analysis, statistics, remote sensing, geospatial analysis, and trajectory analysis.
+                    Download the printable Call for Papers (<a href="./assets/papers/GeoAnomalies26.pdf" target="_blank" class="text-blue-400 hover:text-blue-300 transition-colors">PDF</a>). 
+                    <br>
                     We accept papers addressing issues related to, but not limited to, the following topics:
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <div>
@@ -200,7 +296,7 @@
                     </div>
                 </div>
             </div>
-
+            
             <div class="bento-card p-8 gsap-reveal flex flex-col bg-gray-900 text-white">
                 <h3 class="text-lg font-semibold border-b border-gray-700 pb-4 mb-6">Author Guidelines</h3>
                 <div class="space-y-6 flex-grow">
@@ -217,7 +313,7 @@
                     </div>
                     <div>
                         <h4 class="text-xs font-bold uppercase tracking-widest text-gray-400 mb-2">Contact</h4>
-                        <p class="text-sm text-gray-300 leading-relaxed">For any questions, please contact the <a href="mailto:geoanomalies26@easychair.org" class="text-blue-400 hover:text-blue-300 transition-colors">Program Committee</a>.</p>
+                        <p class="text-sm text-gray-300 leading-relaxed">For any other questions, please contact the <a href="mailto:geoanomalies26@easychair.org" class="text-blue-400 hover:text-blue-300 transition-colors">Program Committee</a>.</p>
                     </div>
                 </div>
                 <div class="mt-8 pt-6 border-t border-gray-700">
@@ -235,14 +331,13 @@
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div class="bento-card p-8 gsap-reveal">
                 <p class="text-[11px] font-bold text-gray-400 uppercase tracking-widest mb-2">Paper Submission</p>
-               <!--  <p class="text-xl font-bold text-gray-900 mt-6">ust 9, 2026</p>-->
-                <p class="text-sm text-gray-400 line-through mb-1">August 9, 2026</p>
-                <p class="text-xl font-bold text-[#BE3455]">August 21, 2026</p>
+                <p class="text-xl font-bold text-gray-900 mt-6">August 9, 2026</p>
+                <!-- <p class="text-sm text-gray-400 line-through mb-1">August 9, 2026</p> -->
+                <!-- <p class="text-xl font-bold text-[#BE3455]">August 29, 2026</p> -->
             </div>
             <div class="bento-card p-8 gsap-reveal">
                 <p class="text-[11px] font-bold text-gray-400 uppercase tracking-widest mb-2">Author Notification</p>
-                <p class="text-sm text-gray-400 line-through mb-1">September 11, 2026</p>
-                <p class="text-xl font-bold text-[#BE3455]">September 18, 2026</p>
+                <p class="text-xl font-bold text-gray-900 mt-6">September 11, 2026</p>
             </div>
             <div class="bento-card p-8 gsap-reveal">
                 <p class="text-[11px] font-bold text-gray-400 uppercase tracking-widest mb-2">Camera-Ready</p>
@@ -302,7 +397,7 @@
                     </div>
                     <div class="gsap-reveal flex flex-col items-center text-center">
                         <p class="font-semibold text-gray-900 text-sm">Qunying Huang</p>
-                        <p class="text-[11px] text-gray-500 mt-1 uppercase tracking-wider">University of Wisconsin-Madison, USA</p>
+                        <p class="text-[11px] text-gray-500 mt-1 uppercase tracking-wider">Emory University, USA</p>
                     </div>
                     <div class="gsap-reveal flex flex-col items-center text-center">
                         <p class="font-semibold text-gray-900 text-sm">Krzysztof Janowicz</p>
@@ -450,11 +545,10 @@
 
             function updateScheduleState() {
                 const now = new Date();
-                const conferenceDate = new Date("2026-11-03T00:00:00-06:00"); 
-                
-                if (false && (now.getFullYear() !== 2026 || now.getMonth() !== 10 || now.getDate() !== 3)) {
-                    return; 
-                }
+                const conferenceDate = new Date(2026, 10, 3);
+                const isConferenceDate = now.getFullYear() === conferenceDate.getFullYear()
+                    && now.getMonth() === conferenceDate.getMonth()
+                    && now.getDate() === conferenceDate.getDate();
 
                 const rows = document.querySelectorAll('.schedule-row');
                 
@@ -465,16 +559,17 @@
 
                     const [startH, startM] = startStr.split(':').map(Number);
                     const [endH, endM] = endStr.split(':').map(Number);
+                    
+                    const startTime = new Date(now);
 
-                    const startTime = new Date();
                     startTime.setHours(startH, startM, 0);
                     
-                    const endTime = new Date();
+                    const endTime = new Date(now);
                     endTime.setHours(endH, endM, 0);
 
                     const timeLabel = row.querySelector('.time-label');
 
-                    if (now >= startTime && now < endTime) {
+                    if (isConferenceDate && now >= startTime && now < endTime) {
                         row.classList.add('session-active');
                         if(timeLabel) timeLabel.classList.replace('text-gray-500', 'text-blue-600');
                         
