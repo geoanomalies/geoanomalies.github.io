@@ -100,6 +100,49 @@
             letter-spacing: 0.05em;
             margin-top: 0.25rem;
         }
+        .keynote-more {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+        .keynote-more details {
+            border: 1px solid var(--apple-border);
+            border-radius: 12px;
+            background: #fff;
+        }
+        .keynote-more summary {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.6rem 0.9rem;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            color: #0066cc;
+            cursor: pointer;
+            list-style: none;
+        }
+        .keynote-more summary::-webkit-details-marker { display: none; }
+        .keynote-more summary::after {
+            content: "";
+            width: 0.45rem;
+            height: 0.45rem;
+            border-right: 2px solid currentColor;
+            border-bottom: 2px solid currentColor;
+            transform: rotate(45deg);
+            transition: transform 0.25s ease;
+        }
+        .keynote-more details[open] summary::after { transform: rotate(-135deg); }
+        .keynote-more summary:hover { color: #004f9e; }
+        .keynote-more .keynote-text {
+            padding: 0 0.9rem 0.9rem;
+            font-size: 14px;
+            line-height: 1.65;
+            color: #424245;
+        }
+        .keynote-more .keynote-text p + p { margin-top: 0.75rem; }
         .row-body {
             display: flex;
             align-items: center;
@@ -172,10 +215,10 @@
                     <a href="#" class="hover:text-black transition-colors">Overview</a>
                     <a href="#schedule" class="hover:text-black transition-colors">Schedule</a>
                     <a href="#cfp" class="hover:text-black transition-colors">Call for Papers</a>
-                    <!-- <a href="#schedule" class="hover:text-black transition-colors">Schedule</a> -->
                     <a href="#dates" class="hover:text-black transition-colors">Dates</a>
                     <a href="#organizers" class="hover:text-black transition-colors">Organizers</a>
                     <a href="#previous" class="hover:text-black transition-colors">Previous Events</a>
+                    <a href="https://sigspatial2026.sigspatial.org/" class="hover:text-black transition-colors">SIGSPATIAL 2026</a>
                 </div>
             </div>
         </div>
@@ -200,7 +243,7 @@
                 <div class="flex flex-col gap-2 mb-8 p-4 bg-gray-50 border border-gray-100 rounded-2xl w-fit">
                     <div class="flex items-center gap-3 text-sm font-medium text-gray-700">
                         <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
-                        November 3, 2026
+                        November 3, 2026, 15:30 - 18:15
                     </div>
                     <div class="flex items-center gap-3 text-sm font-medium text-gray-700">
                         <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.243-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
@@ -233,8 +276,8 @@
                 <div class="col-span-1 row-span-1 img-grid-item relative overflow-hidden">
                     <img class="static-img absolute inset-0 w-full h-full object-cover" src="./assets/img/theater.jpg" alt="Riverside Convention Center">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent flex flex-col justify-end p-6 text-white pointer-events-none z-10">
-                        <p class="text-sm font-semibold">November 03, 2026</p>
-                        <p class="text-xs opacity-90 mt-0.5">Riverside, CA • Convention Center MR7</p>
+                        <p class="text-sm font-semibold">Nov 03, 15:30 - 16:25</p>
+                        <p class="text-xs opacity-90 mt-0.5">Convention Center MR7</p>
                     </div>
                 </div>
             </div>
@@ -244,7 +287,7 @@
 <section id="schedule" class="py-20 px-6 bg-white border-y border-gray-200/60">
         <div class="schedule-wrap mx-auto">
             <h2 class="text-3xl font-bold mb-4 tracking-tight text-center text-gray-900 gsap-reveal">Conference Program</h2>
-            <p class="text-sm text-gray-500 text-center mb-12 gsap-reveal">November 3rd, 2026 • Convention Center MR7, Riverside, CA, USA</p>
+            <p class="text-sm text-gray-500 text-center mb-12 gsap-reveal">November 3rd, 2026 • Convention Center MR7</p>
             
             <div class="bento-card p-2 gsap-reveal" id="schedule-container">
                 <div class="flex flex-col md:flex-row p-5 schedule-row" data-start="15:30" data-end="15:35">
@@ -263,10 +306,11 @@
                     <div class="time-col flex-shrink-0 mb-1 md:mb-0">
                         <span class="text-sm font-mono text-gray-500 font-semibold time-label">15:35 - 16:25</span>
                     </div>
-                    <div class="flex-grow grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-6 items-center">
+                    <div class="flex-grow">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-6 items-center">
                         <div>
                             <span class="inline-block px-2 py-0.5 bg-blue-100 text-blue-700 text-[10px] font-bold uppercase tracking-wider rounded mb-2">Keynote</span>
-                            <h3 class="text-lg font-bold text-gray-900">Topic TBD</h3>
+                            <h3 class="text-lg font-bold text-gray-900">What Mobility Anomaly Detectors See Depends on Context</h3>
                         </div>
                         <div class="keynote-speaker">
                             <div class="keynote-avatar">
@@ -277,6 +321,23 @@
                                 <p class="keynote-affiliation">University of Minnesota, USA</p>
                             </div>
                         </div>
+                    </div>
+                    <div class="keynote-more">
+                        <details>
+                            <summary>Abstract</summary>
+                            <div class="keynote-text">
+                                <p>Whether a mobility event is considered anomalous depends on choices that are often left implicit. These include how we represent location, time, and activity meaning; what counts as normal; and whether we define anomalies at the level of a visit, a trip, a person, or a group. I will begin with a framework from our ongoing survey that organizes these choices across anomaly types, detectors, and benchmarks. I will share initial survey findings and use examples from our collaborative work on mobility behavior clustering, context-aware trajectory anomaly detection, and changes in individual routines to illustrate several of these categories.</p>
+                                <p>The second part of the talk will examine what gives a place its meaning and how that meaning changes with spatial context. I will discuss work on learning place and region representations from language, geographic information, and the surrounding environment. I will then focus on NARA, which learns spatial context from heterogeneous vector geoentities by modeling nearby entities, their geometry, and their metric and topological relations. I will also present early results from integrating NARA with a trajectory mining model for anomaly detection and close with open questions about when context helps detect an anomaly and when it can hide one.</p>
+                            </div>
+                        </details>
+                        <details>
+                            <summary>Speaker Bio</summary>
+                            <div class="keynote-text">
+                                <p>Dr. Yao-Yi Chiang is a Professor in the Computer Science &amp; Engineering Department at the University of Minnesota. Previously, he was an Associate Professor (Research) in Spatial Sciences at the University of Southern California. Dr. Chiang's research interests are in spatial artificial intelligence. He develops machine learning methods to understand complex environmental phenomena and human-environment interactions using multimodal data that can be sparse, unevenly distributed, and span varying spatiotemporal scales.</p>
+                                <p>Dr. Chiang has received funding from various government agencies, including NSF, NEH, NIH, DARPA, IARPA, and NGA, as well as industry partners such as NTT Global Networks and BAE Systems. He was a visiting researcher at Google AI, a machine learning consultant at Meta, and the chief scientist at AirMap. Dr. Chiang founded Kartta Foundation, a non-profit organization that provides software and services to refine and assemble geographic knowledge for the public good. Kartta Foundation manages Kartta Labs, a previous Google product.</p>
+                            </div>
+                        </details>
+                    </div>
                     </div>
                 </div>
                 <div class="flex flex-col md:flex-row p-5 schedule-row bg-gray-100/50" data-start="16:25" data-end="16:45">
@@ -671,7 +732,7 @@
 
             function updateScheduleState() {
                 //const now = new Date();
-                const now = new Date(2026, 10, 3, 19, 37); // For testing purposes, set to a specific date and time
+                const now = new Date(2026, 10, 3, 15, 37); // For testing purposes, set to a specific date and time
                 const conferenceDate = new Date(2026, 10, 3);
                 const isConferenceDate = now.getFullYear() === conferenceDate.getFullYear()
                     && now.getMonth() === conferenceDate.getMonth()
